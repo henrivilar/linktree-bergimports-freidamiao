@@ -1,0 +1,232 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #0E0E0E;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 20px 36px;
+      position: relative;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #2E2E2D 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* ── Logo ── */
+    .logo-wrap {
+      width: 260px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 4px 20px #2E2E2D);
+    }
+
+    /* ── Bio ── */
+    .bio {
+      color: #cccccc;
+      font-size: 15px;
+      text-align: center;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      max-width: 300px;
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 0.6s ease 0.2s both;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 120px;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(90deg, transparent, #cc2222, transparent);
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 0.6s ease 0.3s both;
+    }
+
+    /* ── Buttons ── */
+    .btn-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1.5px solid transparent;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.025);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    /* WhatsApp */
+    .btn-whatsapp {
+      background: linear-gradient(180deg, #2d7a2d 0%, #1a5c1a 100%);
+      border-color: #3a9c3a;
+      box-shadow: 0 0 14px rgba(37, 168, 37, 0.4), 0 4px 14px rgba(0,0,0,0.4);
+      animation: fadeUp 0.5s ease 0.35s both;
+    }
+    .btn-whatsapp:hover {
+      box-shadow: 0 0 28px rgba(37, 168, 37, 0.65), 0 6px 24px rgba(0,0,0,0.55);
+    }
+
+    /* Catálogo */
+    .btn-catalog {
+      background: linear-gradient(180deg, #1a3d8f 0%, #0d2460 100%);
+      border-color: #2a5acf;
+      box-shadow: 0 0 14px rgba(36, 86, 200, 0.4), 0 4px 14px rgba(0,0,0,0.4);
+      animation: fadeUp 0.5s ease 0.47s both;
+    }
+    .btn-catalog:hover {
+      box-shadow: 0 0 28px rgba(36, 86, 200, 0.65), 0 6px 24px rgba(0,0,0,0.55);
+    }
+
+    /* Localização */
+    .btn-location {
+      background: linear-gradient(180deg, #8f1a1a 0%, #600d0d 100%);
+      border-color: #cf2a2a;
+      box-shadow: 0 0 14px rgba(200, 36, 36, 0.4), 0 4px 14px rgba(0,0,0,0.4);
+      animation: fadeUp 0.5s ease 0.59s both;
+    }
+    .btn-location:hover {
+      box-shadow: 0 0 28px rgba(200, 36, 36, 0.65), 0 6px 24px rgba(0,0,0,0.55);
+    }
+
+    /* Icon circle */
+    .btn-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .btn-whatsapp  .btn-icon { background-color: #25a825; }
+    .btn-catalog   .btn-icon { background-color: #2456c8; }
+    .btn-location  .btn-icon { background-color: #cc2222; }
+
+    .btn-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: white;
+    }
+
+    /* Text */
+    .btn-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .btn-title {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+
+    .btn-sub {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    /* Arrow */
+    .btn-arrow {
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+
+    .btn-arrow svg {
+      width: 20px;
+      height: 20px;
+      stroke: white;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: auto;
+      padding-top: 40px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 0.6s ease 0.75s both;
+    }
+
+    footer p {
+      color: #555555;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      line-height: 1.8;
+    }
+
+    footer p + p {
+      color: #444444;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
